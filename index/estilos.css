@@ -1,0 +1,463 @@
+
+/* =================================
+   CONFIGURACION GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 90px 10%;
+}
+
+.subtitulo {
+    color: #ff8c00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h2 span,
+h1 span {
+    color: #ff8c00;
+}
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+header {
+    width: 100%;
+    background-color: #080808;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #292929;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff8c00;
+}
+
+.btn-pedir {
+    background-color: #ff8c00;
+    color: #111;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-pedir:hover {
+    background-color: #fff;
+}
+
+/* =================================
+   INICIO
+================================= */
+
+#inicio {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #111, #252525);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    color: #ccc;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #111;
+    padding: 16px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(255, 140, 0, 0.15);
+}
+
+/* =================================
+   NOSOTROS
+================================= */
+
+#nosotros {
+    background-color: #171717;
+    text-align: center;
+}
+
+.nosotros-contenido {
+    max-width: 850px;
+    margin: auto;
+}
+
+.nosotros-contenido h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.nosotros-contenido p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* =================================
+   MENU
+================================= */
+
+#menu {
+    background-color: #111;
+    text-align: center;
+}
+
+.menu-titulo {
+    margin-bottom: 50px;
+}
+
+.menu-titulo h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.menu-titulo > p:last-child {
+    color: #bbb;
+}
+
+.menu-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.producto {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    border-color: #ff8c00;
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.producto h3 {
+    font-size: 21px;
+    margin: 20px 10px 10px;
+}
+
+.producto p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+
+.producto h4 {
+    color: #ff8c00;
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+/* =================================
+   PROMOCIONES
+================================= */
+
+#promociones {
+    background-color: #1b1b1b;
+    text-align: center;
+}
+
+.promociones-titulo {
+    margin-bottom: 45px;
+}
+
+.promociones-titulo h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.promociones-titulo > p:last-child {
+    color: #bbb;
+}
+
+.promociones-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.promo {
+    background: linear-gradient(145deg, #292929, #151515);
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 1px solid #444;
+    transition: 0.3s;
+}
+
+.promo:hover {
+    border-color: #ff8c00;
+    transform: translateY(-8px);
+}
+
+.promo h3 {
+    color: #ff8c00;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.promo p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.promo h4 {
+    font-size: 30px;
+    color: white;
+}
+
+/* =================================
+   CONTACTO
+================================= */
+
+#contacto {
+    background-color: #111;
+    text-align: center;
+}
+
+.contacto-contenido {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contacto-contenido h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.contacto-contenido p {
+    color: #ccc;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.contacto-contenido strong {
+    color: white;
+}
+
+.contacto-contenido .btn-principal {
+    margin-top: 20px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #080808;
+    padding: 50px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-contenido h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-contenido h2 span {
+    color: #ff8c00;
+}
+
+.footer-contenido p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.footer-redes a {
+    color: #ff8c00;
+    transition: 0.3s;
+}
+
+.footer-redes a:hover {
+    color: white;
+}
+
+.copyright {
+    font-size: 13px;
+    border-top: 1px solid #292929;
+    padding-top: 20px;
+}
+
+/* =================================
+   ADAPTACION A CELULARES
+================================= */
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 42px;
+    }
+
+    .hero-image img {
+        max-width: 400px;
+    }
+
+    .menu-productos,
+    .promociones-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .menu-productos,
+    .promociones-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-titulo h2,
+    .promociones-titulo h2 {
+        font-size: 30px;
+    }
+
+    .contacto-contenido h2 {
+        font-size: 34px;
+    }
+
+    .footer-redes {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
