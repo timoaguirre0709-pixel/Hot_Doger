@@ -30,18 +30,18 @@
         <p class="subtitulo">BIENVENIDO DE NUEVO</p>
         <h2>INGRESA A TU <span>CUENTA</span></h2>
         <p class="descripcion">
-            Ingresa con tu correo y tu contraseña para acceder a tu cuenta.
+            Ingresa con tu correo y tu contraseña para acceder a tu cuenta (por ahora puedes entrar sin llenar los campos).
         </p>
     </div>
 
-    <form class="formulario-acceso" action="#" method="post">
+    <form class="formulario-acceso" id="form-acceso" action="clientes.html" novalidate>
         <h3>Iniciar sesión</h3>
 
         <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
 
         <label for="clave">Contraseña</label>
-        <input type="password" id="clave" name="clave" placeholder="Tu contraseña" required>
+        <input type="password" id="clave" name="clave" placeholder="Tu contraseña">
 
         <div class="fila-opciones">
             <label class="recordar">
@@ -68,6 +68,14 @@
         <p class="copyright">© 2026 Hotdoger. Todos los derechos reservados.</p>
     </div>
 </footer>
+
+<script>
+    // Entra a la zona de clientes sin exigir datos en el formulario.
+    document.getElementById("form-acceso").addEventListener("submit", function (e) {
+        e.preventDefault();
+        window.location.href = "clientes.html";
+    });
+</script>
 
 </body>
 </html>

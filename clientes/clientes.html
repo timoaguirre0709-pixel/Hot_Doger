@@ -18,40 +18,77 @@
             <li><a href="#mi-cuenta" class="activo">mi cuenta</a></li>
             <li><a href="#menu">menú</a></li>
             <li><a href="#promociones">combos</a></li>
+            <li><a href="#recompensas">recompensas</a></li>
             <li><a href="#historial">mis pedidos</a></li>
-            <li><a href="#pedido">mi pedido (<span id="contador">0</span>)</a></li>
+            <li><a href="#perfil">mi perfil</a></li>
+            <li><button type="button" class="btn-nav-pedido" id="abrir-pedido">🛒 mi pedido (<span id="contador">0</span>)</button></li>
             <li><a href="iniciar_sesion.html">cerrar sesión</a></li>
         </ul>
     </nav>
 </header>
 
+<!-- ===== MI CUENTA ===== -->
 <section id="mi-cuenta">
-    <div class="titulo-bloque">
-        <p class="subtitulo">BIENVENIDO DE NUEVO</p>
-        <h2>HOLA, <span>CLIENTE</span></h2>
-        <p>Esto es lo que tienes en tu cuenta (datos de ejemplo).</p>
+    <div class="cuenta-hero">
+        <div class="cuenta-saludo">
+            <div class="avatar" id="avatar" aria-hidden="true">C</div>
+            <div>
+                <p class="subtitulo">BIENVENIDO DE NUEVO</p>
+                <h2>HOLA, <span id="nombre-saludo">CLIENTE</span></h2>
+                <p class="nivel">Nivel <strong id="nivel-nombre">Perrito</strong> · <span id="nivel-detalle">Sigue sumando puntos</span></p>
+                <div class="acciones-hero">
+                    <a href="#menu" class="btn-principal">PEDIR AHORA</a>
+                    <a href="#historial" class="btn-secundario">REPETIR UN PEDIDO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-puntos">
+            <p class="etiqueta">TUS PUNTOS</p>
+            <p class="puntos-grande"><span id="puntos">0</span> <small>pts</small></p>
+            <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="200" id="barra-puntos">
+                <div class="barra-avance" id="barra-avance"></div>
+            </div>
+            <p class="texto-puntos" id="texto-puntos"></p>
+            <p class="mini">Ganas 1 punto por cada $1.000 de compra.</p>
+        </div>
     </div>
 
     <div class="tarjetas-cuenta">
         <div class="dato">
-            <h4>120</h4>
-            <h3>Puntos acumulados</h3>
-            <p>Ganas 1 punto por cada $1.000 de compra.</p>
-        </div>
-        <div class="dato">
-            <h4>8</h4>
+            <span class="icono"></span>
+            <h4 id="dato-pedidos">0</h4>
             <h3>Pedidos realizados</h3>
             <p>¡Gracias por elegirnos siempre!</p>
         </div>
         <div class="dato">
-            <h4>80</h4>
-            <h3>Puntos para tu premio</h3>
-            <div class="barra"><div class="barra-avance"></div></div>
-            <p>A 200 puntos, un perro caliente gratis.</p>
+            <span class="icono"></span>
+            <h4 id="dato-gastado">$0</h4>
+            <h3>Total en compras</h3>
+            <p>Lo que has disfrutado con nosotros.</p>
         </div>
+        <div class="dato">
+            <span class="icono"></span>
+            <h4 id="dato-favorito" class="texto">—</h4>
+            <h3>Tu antojo favorito</h3>
+            <p>El producto que más has pedido.</p>
+        </div>
+        <div class="dato">
+            <span class="icono"></span>
+            <h4 id="dato-favoritos">0</h4>
+            <h3>Productos guardados</h3>
+            <p>Marca el corazón en el menú.</p>
+        </div>
+    </div>
+
+    <div class="franja-info">
+        <span> Calle 14 #5-08, Ibagué</span>
+        <span> Lunes a sábado, 4:00 p.m. - 8:00 p.m.</span>
+        <span id="estado-local" class="estado-local"></span>
     </div>
 </section>
 
+<!-- ===== MENU ===== -->
 <section id="menu">
     <div class="menu-titulo">
         <p class="subtitulo">ARMA TU PEDIDO</p>
@@ -59,31 +96,46 @@
         <p>Elige lo que se te antoje y agrégalo a tu pedido.</p>
     </div>
 
-    <div class="menu-productos">
-        <div class="producto">
+    <div class="herramientas-menu">
+        <div class="filtros" role="group" aria-label="Filtrar menú">
+            <button type="button" class="filtro activo" data-filtro="todos">Todos</button>
+            <button type="button" class="filtro" data-filtro="menu">Menú</button>
+            <button type="button" class="filtro" data-filtro="combo">Combos</button>
+            <button type="button" class="filtro" data-filtro="favoritos"> Favoritos</button>
+        </div>
+        <input type="search" id="buscar" placeholder="Buscar producto..." aria-label="Buscar producto">
+    </div>
+
+    <div class="menu-productos" id="grilla-menu">
+        <article class="producto" data-id="hamburguesa" data-cat="menu" data-nombre="Hamburguesa clásica" data-precio="8000">
+            <button type="button" class="btn-fav" aria-label="Guardar en favoritos" data-id="hamburguesa">♡</button>
             <img src="../index/imagenes/hamburguesa 1.png" alt="Hamburguesa clásica">
             <h3>Hamburguesa clásica</h3>
             <p>Carne artesanal, queso, tomate, lechuga y cebolla caramelizada.</p>
             <h4>$8.000</h4>
-            <button class="btn-agregar" data-nombre="Hamburguesa clásica" data-precio="8000">AGREGAR</button>
-        </div>
-        <div class="producto">
+            <button type="button" class="btn-agregar">AGREGAR</button>
+        </article>
+        <article class="producto" data-id="perro" data-cat="menu" data-nombre="Perro caliente" data-precio="8000">
+            <button type="button" class="btn-fav" aria-label="Guardar en favoritos" data-id="perro">♡</button>
             <img src="../index/imagenes/perro.png" alt="Perro caliente">
             <h3>Perro caliente</h3>
             <p>Salchicha Porchi, queso, papa ripio y cebolla.</p>
             <h4>$8.000</h4>
-            <button class="btn-agregar" data-nombre="Perro caliente" data-precio="8000">AGREGAR</button>
-        </div>
-        <div class="producto">
+            <button type="button" class="btn-agregar">AGREGAR</button>
+        </article>
+        <article class="producto" data-id="salchipapa" data-cat="menu" data-nombre="Salchipapa" data-precio="15000">
+            <button type="button" class="btn-fav" aria-label="Guardar en favoritos" data-id="salchipapa">♡</button>
             <img src="../index/imagenes/salchipapa.png" alt="Salchipapa">
             <h3>Salchipapa</h3>
             <p>Papas, salchicha, queso gratinado y maicitos.</p>
             <h4>$15.000</h4>
-            <button class="btn-agregar" data-nombre="Salchipapa" data-precio="15000">AGREGAR</button>
-        </div>
+            <button type="button" class="btn-agregar">AGREGAR</button>
+        </article>
     </div>
+    <p class="sin-resultados" id="sin-resultados" hidden>No encontramos productos con ese filtro.</p>
 </section>
 
+<!-- ===== COMBOS ===== -->
 <section id="promociones">
     <div class="promociones-titulo">
         <p class="subtitulo">NO TE QUEDES CON EL ANTOJO</p>
@@ -91,68 +143,77 @@
         <p>Tus productos favoritos acompañados de unas deliciosas papas.</p>
     </div>
 
-    <div class="promociones-productos">
-        <div class="promo">
+    <div class="promociones-productos" id="grilla-combos">
+        <article class="promo" data-id="combo-clasico" data-cat="combo" data-nombre="Combo clásico" data-precio="13500">
+            <span class="etiqueta-combo">MÁS PEDIDO</span>
+            <button type="button" class="btn-fav" aria-label="Guardar en favoritos" data-id="combo-clasico">♡</button>
+            <img src="../index/imagenes/hamburguesa 1.png" alt="Combo clásico">
             <h3>COMBO CLÁSICO</h3>
             <p>Hamburguesa clásica + papas</p>
             <h4>$13.500</h4>
-            <button class="btn-agregar" data-nombre="Combo clásico" data-precio="13500">AGREGAR</button>
-        </div>
-        <div class="promo">
+            <button type="button" class="btn-agregar">AGREGAR</button>
+        </article>
+        <article class="promo" data-id="combo-hotdoger" data-cat="combo" data-nombre="Combo Hotdoger" data-precio="13000">
+            <button type="button" class="btn-fav" aria-label="Guardar en favoritos" data-id="combo-hotdoger">♡</button>
+            <img src="../index/imagenes/perro.png" alt="Combo Hotdoger">
             <h3>COMBO HOTDOGER</h3>
             <p>Perro caliente + papas</p>
             <h4>$13.000</h4>
-            <button class="btn-agregar" data-nombre="Combo Hotdoger" data-precio="13000">AGREGAR</button>
-        </div>
-        <div class="promo">
+            <button type="button" class="btn-agregar">AGREGAR</button>
+        </article>
+        <article class="promo" data-id="combo-patacon" data-cat="combo" data-nombre="Combo patacón" data-precio="14500">
+            <button type="button" class="btn-fav" aria-label="Guardar en favoritos" data-id="combo-patacon">♡</button>
+            <img src="../index/imagenes/hamburguesa.png" alt="Combo patacón">
             <h3>COMBO PATACÓN</h3>
             <p>Hamburguesa de patacón + papas</p>
             <h4>$14.500</h4>
-            <button class="btn-agregar" data-nombre="Combo patacón" data-precio="14500">AGREGAR</button>
-        </div>
+            <button type="button" class="btn-agregar">AGREGAR</button>
+        </article>
     </div>
 </section>
 
-<section id="pedido">
-    <div class="titulo-bloque">
-        <p class="subtitulo">CASI LISTO</p>
-        <h2>MI <span>PEDIDO</span></h2>
-    </div>
-
-    <div class="carrito">
-        <p id="vacio" class="vacio">Aún no has agregado nada. ¡Elige algo del menú!</p>
-        <ul id="lista-pedido"></ul>
-        <p class="total">Total: <span id="total">$0</span></p>
-        <div class="acciones-pedido">
-            <button id="vaciar" class="btn-secundario">VACIAR PEDIDO</button>
-            <a id="enviar" href="https://wa.me/" target="_blank" class="btn-principal">PEDIR POR WHATSAPP</a>
-        </div>
-    </div>
-</section>
-
-<section id="beneficios-clientes">
+<!-- ===== RECOMPENSAS ===== -->
+<section id="recompensas">
     <div class="titulo-bloque">
         <p class="subtitulo">SOLO PARA REGISTRADOS</p>
-        <h2>BENEFICIOS <span>EXCLUSIVOS</span></h2>
+        <h2>RECOMPENSAS Y <span>BENEFICIOS</span></h2>
         <p>Por ser parte de la familia Hotdoger.</p>
     </div>
 
-    <div class="promociones-productos">
+    <div class="recompensa-principal">
+        <div>
+            <h3> Perro caliente gratis</h3>
+            <p>Canjéalo con <strong>200 puntos</strong>. Se descuenta al enviar tu pedido.</p>
+        </div>
+        <a href="#menu" class="btn-principal" id="btn-canjear">PEDIR Y CANJEAR</a>
+    </div>
+
+    <div class="promociones-productos beneficios">
         <div class="promo">
+            <span class="icono"></span>
             <h3>CUMPLEAÑOS</h3>
             <p>Un perro caliente gratis en la semana de tu cumpleaños.</p>
         </div>
         <div class="promo">
+            <span class="icono"></span>
             <h3>PROMOS ANTICIPADAS</h3>
             <p>Te avisamos primero de los nuevos combos y sabores.</p>
         </div>
         <div class="promo">
+            <span class="icono"></span>
             <h3>PUNTOS CANJEABLES</h3>
             <p>Cambia tus puntos por productos del menú.</p>
         </div>
     </div>
+
+    <div class="niveles">
+        <div class="nivel-item" data-nivel="Perrito"><strong> Perrito</strong><span>0 a 99 puntos</span></div>
+        <div class="nivel-item" data-nivel="Chef"><strong>Chef</strong><span>100 a 299 puntos</span></div>
+        <div class="nivel-item" data-nivel="Leyenda"><strong> Leyenda</strong><span>300 puntos o más</span></div>
+    </div>
 </section>
 
+<!-- ===== HISTORIAL ===== -->
 <section id="historial">
     <div class="titulo-bloque">
         <p class="subtitulo">TUS ANTOJOS</p>
@@ -162,17 +223,41 @@
     <div class="caja-tabla">
         <table>
             <thead>
-                <tr><th>Fecha</th><th>Pedido</th><th>Total</th><th>Estado</th></tr>
+                <tr><th>Fecha</th><th>Pedido</th><th>Total</th><th>Estado</th><th></th></tr>
             </thead>
-            <tbody>
-                <tr><td>12 nov 2026</td><td>Combo clásico</td><td>$13.500</td><td><span class="estado">Entregado</span></td></tr>
-                <tr><td>05 nov 2026</td><td>Salchipapa</td><td>$15.000</td><td><span class="estado">Entregado</span></td></tr>
-                <tr><td>29 oct 2026</td><td>Combo Hotdoger</td><td>$13.000</td><td><span class="estado">Entregado</span></td></tr>
-            </tbody>
+            <tbody id="tabla-historial"></tbody>
         </table>
     </div>
+    <p class="sin-resultados" id="historial-vacio" hidden>Aún no tienes pedidos. ¡Haz el primero!</p>
 
     <a href="#menu" class="btn-principal">PEDIR DE NUEVO</a>
+</section>
+
+<!-- ===== PERFIL ===== -->
+<section id="perfil">
+    <div class="titulo-bloque">
+        <p class="subtitulo">TUS DATOS</p>
+        <h2>MI <span>PERFIL</span></h2>
+        <p>Guárdalos una vez y tus pedidos saldrán más rápido.</p>
+    </div>
+
+    <form class="formulario-perfil" id="form-perfil" novalidate>
+        <div class="campo">
+            <label for="p-nombre">Nombre</label>
+            <input type="text" id="p-nombre" placeholder="Tu nombre">
+        </div>
+        <div class="campo">
+            <label for="p-telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="p-telefono" placeholder="300 000 0000">
+        </div>
+        <div class="campo ancho">
+            <label for="p-direccion">Dirección de entrega</label>
+            <input type="text" id="p-direccion" placeholder="Calle, número, barrio y referencias">
+        </div>
+        <div class="campo ancho fila-fin">
+            <button type="submit" class="btn-principal">GUARDAR DATOS</button>
+        </div>
+    </form>
 </section>
 
 <footer>
@@ -187,6 +272,65 @@
         <p class="copyright">© 2026 Hotdoger. Todos los derechos reservados.</p>
     </div>
 </footer>
+
+<!-- ===== BOTÓN FLOTANTE + CARRITO LATERAL ===== -->
+<button type="button" class="carrito-flotante" id="carrito-flotante" aria-label="Ver mi pedido">
+    🛒 <span id="flotante-total">$0</span> <em id="flotante-cant">0</em>
+</button>
+
+<div class="velo" id="velo" hidden></div>
+
+<aside class="panel-pedido" id="panel-pedido" aria-label="Mi pedido" aria-hidden="true">
+    <div class="panel-cabecera">
+        <h3>MI <span>PEDIDO</span></h3>
+        <button type="button" class="cerrar" id="cerrar-pedido" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="panel-cuerpo">
+        <p id="vacio" class="vacio">Aún no has agregado nada. ¡Elige algo del menú!</p>
+        <ul id="lista-pedido"></ul>
+
+        <div id="opciones-pedido" hidden>
+            <div class="tipo-entrega" role="group" aria-label="Tipo de entrega">
+                <label><input type="radio" name="entrega" value="domicilio" checked>  Domicilio</label>
+                <label><input type="radio" name="entrega" value="recoger">  Recoger en local</label>
+            </div>
+
+            <label for="o-direccion" id="lbl-direccion">Dirección de entrega</label>
+            <input type="text" id="o-direccion" placeholder="Calle, número, barrio y referencias">
+
+            <label for="o-pago">Forma de pago</label>
+            <select id="o-pago">
+                <option>Efectivo</option>
+                <option>Nequi / Daviplata</option>
+                <option>Transferencia</option>
+            </select>
+
+            <label for="o-notas">Notas para tu pedido</label>
+            <textarea id="o-notas" rows="2" placeholder="Ej: sin cebolla, salsas aparte..."></textarea>
+
+            <label class="canje" id="canje-caja" hidden>
+                <input type="checkbox" id="o-canje"> Canjear 200 puntos: perro caliente gratis (−$8.000)
+            </label>
+        </div>
+    </div>
+
+    <div class="panel-pie">
+        <div class="resumen">
+            <p>Subtotal <span id="subtotal">$0</span></p>
+            <p id="fila-descuento" hidden>Descuento por puntos <span id="descuento">−$0</span></p>
+            <p class="total">Total: <span id="total">$0</span></p>
+            <p class="mini" id="puntos-ganar"></p>
+            <p class="mini">El costo del domicilio se confirma por WhatsApp.</p>
+        </div>
+        <div class="acciones-pedido">
+            <button type="button" id="vaciar" class="btn-secundario">VACIAR</button>
+            <button type="button" id="enviar" class="btn-principal">PEDIR POR WHATSAPP</button>
+        </div>
+    </div>
+</aside>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
 
 <script src="js/pedido.js"></script>
 </body>
