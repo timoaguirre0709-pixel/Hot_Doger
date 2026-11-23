@@ -1,0 +1,281 @@
+.nav-links a.activo {
+    color: #ff8c00;
+}
+
+#acceso {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #111, #252525);
+}
+
+.acceso-texto {
+    flex: 1;
+}
+
+.acceso-texto h2 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.formulario-acceso {
+    flex: 1;
+    max-width: 440px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 40px 35px;
+    box-shadow: 0 15px 40px rgba(255, 140, 0, 0.12);
+}
+
+.formulario-acceso h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.formulario-acceso label {
+    display: block;
+    color: #ccc;
+    font-size: 14px;
+    margin: 18px 0 8px;
+}
+
+.formulario-acceso input[type="email"],
+.formulario-acceso input[type="password"] {
+    width: 100%;
+    padding: 13px 15px;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.formulario-acceso input[type="email"]:hover,
+.formulario-acceso input[type="password"]:hover {
+    border-color: #777;
+}
+
+.formulario-acceso input[type="email"]:focus,
+.formulario-acceso input[type="password"]:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.fila-opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 25px;
+    font-size: 13px;
+}
+
+.fila-opciones .recordar {
+    margin: 0;
+    font-size: 13px;
+}
+
+.fila-opciones input {
+    accent-color: #ff8c00;
+}
+
+.fila-opciones a,
+.nota-registro a {
+    color: #ff8c00;
+    transition: 0.3s;
+}
+
+.fila-opciones a:hover,
+.nota-registro a:hover {
+    color: #fff;
+}
+
+.formulario-acceso .btn-principal {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.nota-registro {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#mi-cuenta {
+    background-color: #171717;
+    text-align: center;
+}
+
+#beneficios-clientes {
+    background-color: #1b1b1b;
+    text-align: center;
+}
+
+#historial {
+    background-color: #111;
+    text-align: center;
+}
+
+.titulo-bloque {
+    margin-bottom: 45px;
+}
+
+.titulo-bloque h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.titulo-bloque > p:last-child {
+    color: #bbb;
+}
+
+.tarjetas-cuenta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.dato {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 35px 25px;
+    transition: 0.3s;
+}
+
+.dato:hover {
+    transform: translateY(-8px);
+    border-color: #ff8c00;
+}
+
+.dato h4 {
+    color: #ff8c00;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.dato h3 {
+    font-size: 20px;
+    margin: 8px 0 12px;
+}
+
+.dato p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.barra {
+    height: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.barra-avance {
+    width: 40%;
+    height: 100%;
+    background-color: #ff8c00;
+    border-radius: 10px;
+}
+
+#beneficios-clientes .promo p {
+    margin-bottom: 0;
+}
+
+.caja-tabla {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background-color: #1e1e1e;
+    color: #ff8c00;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 16px 20px;
+}
+
+td {
+    color: #ccc;
+    padding: 16px 20px;
+    border-top: 1px solid #292929;
+    white-space: nowrap;
+}
+
+tbody tr {
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #1c1c1c;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #161616;
+}
+
+.estado {
+    display: inline-block;
+    background-color: rgba(255, 140, 0, 0.15);
+    color: #ff8c00;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+    #acceso {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .acceso-texto h2 {
+        font-size: 38px;
+    }
+
+    .formulario-acceso {
+        width: 100%;
+        text-align: left;
+    }
+
+    .tarjetas-cuenta {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .acceso-texto h2 {
+        font-size: 32px;
+    }
+
+    .formulario-acceso {
+        padding: 30px 22px;
+    }
+
+    .titulo-bloque h2 {
+        font-size: 30px;
+    }
+}

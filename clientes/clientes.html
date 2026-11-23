@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes registrados | Hotdoger</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="clientes.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>HOTDOGER<span>.</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#inicio">inicio</a></li>
+            <li><a href="index.html#nosotros">nosotros</a></li>
+            <li><a href="index.html#menu">menú</a></li>
+            <li><a href="index.html#promociones">promociones</a></li>
+            <li><a href="index.html#contacto">contacto</a></li>
+            <li><a href="clientes.html" class="activo">clientes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="acceso">
+    <div class="acceso-texto">
+        <p class="subtitulo">BIENVENIDO DE NUEVO</p>
+        <h2>INGRESA A TU <span>CUENTA</span></h2>
+        <p class="descripcion">
+            Si ya eres cliente registrado, entra para ver tus puntos,
+            tus beneficios exclusivos y repetir tus pedidos favoritos.
+        </p>
+    </div>
+
+    <form class="formulario-acceso" action="#" method="post">
+        <h3>Iniciar sesión</h3>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" name="clave" placeholder="Tu contraseña" required>
+
+        <div class="fila-opciones">
+            <label class="recordar">
+                <input type="checkbox" name="recordar"> Recordarme
+            </label>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-principal">INGRESAR</button>
+
+        <p class="nota-registro">¿Aún no tienes cuenta? <a href="#">Regístrate aquí</a></p>
+    </form>
+</section>
+
+<section id="mi-cuenta">
+    <div class="titulo-bloque">
+        <p class="subtitulo">TU ESPACIO HOTDOGER</p>
+        <h2>HOLA, <span>CLIENTE</span></h2>
+        <p>Así va tu cuenta (datos de ejemplo).</p>
+    </div>
+
+    <div class="tarjetas-cuenta">
+        <div class="dato">
+            <h4>120</h4>
+            <h3>Puntos acumulados</h3>
+            <p>Ganas 1 punto por cada $1.000 de compra.</p>
+        </div>
+        <div class="dato">
+            <h4>8</h4>
+            <h3>Pedidos realizados</h3>
+            <p>¡Gracias por elegirnos siempre!</p>
+        </div>
+        <div class="dato">
+            <h4>80</h4>
+            <h3>Puntos para tu premio</h3>
+            <div class="barra"><div class="barra-avance"></div></div>
+            <p>A 200 puntos, un perro caliente gratis.</p>
+        </div>
+    </div>
+</section>
+
+<section id="beneficios-clientes">
+    <div class="titulo-bloque">
+        <p class="subtitulo">SOLO PARA REGISTRADOS</p>
+        <h2>BENEFICIOS <span>EXCLUSIVOS</span></h2>
+        <p>Por ser parte de la familia Hotdoger.</p>
+    </div>
+
+    <div class="promociones-productos">
+        <div class="promo">
+            <h3>CUMPLEAÑOS</h3>
+            <p>Un perro caliente gratis en la semana de tu cumpleaños.</p>
+        </div>
+        <div class="promo">
+            <h3>PROMOS ANTICIPADAS</h3>
+            <p>Te avisamos primero de los nuevos combos y sabores.</p>
+        </div>
+        <div class="promo">
+            <h3>PUNTOS CANJEABLES</h3>
+            <p>Cambia tus puntos por productos del menú.</p>
+        </div>
+    </div>
+</section>
+
+<section id="historial">
+    <div class="titulo-bloque">
+        <p class="subtitulo">TUS ANTOJOS</p>
+        <h2>ÚLTIMOS <span>PEDIDOS</span></h2>
+    </div>
+
+    <div class="caja-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12 nov 2026</td>
+                    <td>Combo clásico</td>
+                    <td>$13.500</td>
+                    <td><span class="estado">Entregado</span></td>
+                </tr>
+                <tr>
+                    <td>05 nov 2026</td>
+                    <td>Salchipapa</td>
+                    <td>$15.000</td>
+                    <td><span class="estado">Entregado</span></td>
+                </tr>
+                <tr>
+                    <td>29 oct 2026</td>
+                    <td>Combo Hotdoger</td>
+                    <td>$13.000</td>
+                    <td><span class="estado">Entregado</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="https://wa.me/" class="btn-principal">PEDIR DE NUEVO</a>
+</section>
+
+<footer>
+    <div class="footer-contenido">
+        <h2>HOTDOGER<span>.</span></h2>
+        <p>Que no te lo cuenten, ven y disfruta.</p>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/hotdoger_iba/" target="_blank">Instagram</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="#acceso">Volver arriba</a>
+        </div>
+        <p class="copyright">© 2026 Hotdoger. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
