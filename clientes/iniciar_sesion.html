@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Hotdoger</title>
+    <link rel="stylesheet" href="../index/css_index/estilos.css">
+    <link rel="stylesheet" href="css/clientes.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <h1><a href="../index/index.html#inicio"><img src="../index/imagenes/logo.png" alt="Hotdoger - Sabor que te hace volver"></a></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index/index.html#inicio">inicio</a></li>
+            <li><a href="../index/index.html#nosotros">nosotros</a></li>
+            <li><a href="../index/index.html#menu">menú</a></li>
+            <li><a href="../index/index.html#promociones">promociones</a></li>
+            <li><a href="../index/index.html#contacto">contacto</a></li>
+            <li><a href="iniciar_sesion.html" class="activo">iniciar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="acceso">
+    <div class="acceso-texto">
+        <p class="subtitulo">BIENVENIDO DE NUEVO</p>
+        <h2>INGRESA A TU <span>CUENTA</span></h2>
+        <p class="descripcion">
+            Ingresa con tu correo y tu contraseña para acceder a tu cuenta.
+        </p>
+    </div>
+
+    <form class="formulario-acceso" action="#" method="post">
+        <h3>Iniciar sesión</h3>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" name="clave" placeholder="Tu contraseña" required>
+
+        <div class="fila-opciones">
+            <label class="recordar">
+                <input type="checkbox" name="recordar"> Recordarme
+            </label>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-principal">INGRESAR</button>
+
+        <p class="nota-registro">¿Aún no tienes cuenta? <a href="#">Regístrate aquí</a></p>
+    </form>
+</section>
+
+<footer>
+    <div class="footer-contenido">
+        <img src="../index/imagenes/logo.png" alt="Hotdoger" class="footer-logo">
+        <p>Que no te lo cuenten, ven y disfruta.</p>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/hotdoger_iba/" target="_blank">Instagram</a>
+            <a href="../index/index.html#contacto">Contacto</a>
+            <a href="#acceso">Volver arriba</a>
+        </div>
+        <p class="copyright">© 2026 Hotdoger. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

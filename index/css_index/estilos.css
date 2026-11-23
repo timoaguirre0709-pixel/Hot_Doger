@@ -461,3 +461,39 @@ footer {
         gap: 20px;
     }
 }
+
+
+/* =================================
+   LOGO
+================================= */
+
+header {
+    padding: 10px 10%;
+}
+
+.logo img {
+    height: 64px;
+    width: auto;
+    display: block;
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.06);
+}
+
+.footer-logo {
+    width: 200px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        height: 54px;
+    }
+
+    .footer-logo {
+        width: 160px;
+    }
+}

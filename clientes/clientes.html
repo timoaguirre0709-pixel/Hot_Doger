@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes registrados | Hotdoger</title>
+    <title>Mi cuenta | Hotdoger</title>
     <link rel="stylesheet" href="../index/css_index/estilos.css">
     <link rel="stylesheet" href="css/clientes.css">
 </head>
@@ -12,56 +12,24 @@
 <header>
     <nav class="navbar">
         <div class="logo">
-            <h1>HOTDOGER<span>.</span></h1>
+            <h1><a href="../index/index.html#inicio"><img src="../index/imagenes/logo.png" alt="Hotdoger - Sabor que te hace volver"></a></h1>
         </div>
         <ul class="nav-links">
-            <li><a href="../index/index.html#inicio">inicio</a></li>
-            <li><a href="../index/index.html#nosotros">nosotros</a></li>
-            <li><a href="../index/index.html#menu">menú</a></li>
-            <li><a href="../index/index.html#promociones">promociones</a></li>
-            <li><a href="../index/index.html#contacto">contacto</a></li>
-            <li><a href="clientes.html" class="activo">clientes</a></li>
+            <li><a href="#mi-cuenta" class="activo">mi cuenta</a></li>
+            <li><a href="#menu">menú</a></li>
+            <li><a href="#promociones">combos</a></li>
+            <li><a href="#historial">mis pedidos</a></li>
+            <li><a href="#pedido">mi pedido (<span id="contador">0</span>)</a></li>
+            <li><a href="iniciar_sesion.html">cerrar sesión</a></li>
         </ul>
     </nav>
 </header>
 
-<section id="acceso">
-    <div class="acceso-texto">
-        <p class="subtitulo">BIENVENIDO DE NUEVO</p>
-        <h2>INGRESA A TU <span>CUENTA</span></h2>
-        <p class="descripcion">
-            Si ya eres cliente registrado, entra para ver tus puntos,
-            tus beneficios exclusivos y repetir tus pedidos favoritos.
-        </p>
-    </div>
-
-    <form class="formulario-acceso" action="#" method="post">
-        <h3>Iniciar sesión</h3>
-
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
-
-        <label for="clave">Contraseña</label>
-        <input type="password" id="clave" name="clave" placeholder="Tu contraseña" required>
-
-        <div class="fila-opciones">
-            <label class="recordar">
-                <input type="checkbox" name="recordar"> Recordarme
-            </label>
-            <a href="#">¿Olvidaste tu contraseña?</a>
-        </div>
-
-        <button type="submit" class="btn-principal">INGRESAR</button>
-
-        <p class="nota-registro">¿Aún no tienes cuenta? <a href="#">Regístrate aquí</a></p>
-    </form>
-</section>
-
 <section id="mi-cuenta">
     <div class="titulo-bloque">
-        <p class="subtitulo">TU ESPACIO HOTDOGER</p>
+        <p class="subtitulo">BIENVENIDO DE NUEVO</p>
         <h2>HOLA, <span>CLIENTE</span></h2>
-        <p>Así va tu cuenta (datos de ejemplo).</p>
+        <p>Esto es lo que tienes en tu cuenta (datos de ejemplo).</p>
     </div>
 
     <div class="tarjetas-cuenta">
@@ -80,6 +48,84 @@
             <h3>Puntos para tu premio</h3>
             <div class="barra"><div class="barra-avance"></div></div>
             <p>A 200 puntos, un perro caliente gratis.</p>
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <div class="menu-titulo">
+        <p class="subtitulo">ARMA TU PEDIDO</p>
+        <h2>NUESTRO <span>MENÚ</span></h2>
+        <p>Elige lo que se te antoje y agrégalo a tu pedido.</p>
+    </div>
+
+    <div class="menu-productos">
+        <div class="producto">
+            <img src="../index/imagenes/hamburguesa 1.png" alt="Hamburguesa clásica">
+            <h3>Hamburguesa clásica</h3>
+            <p>Carne artesanal, queso, tomate, lechuga y cebolla caramelizada.</p>
+            <h4>$8.000</h4>
+            <button class="btn-agregar" data-nombre="Hamburguesa clásica" data-precio="8000">AGREGAR</button>
+        </div>
+        <div class="producto">
+            <img src="../index/imagenes/perro.png" alt="Perro caliente">
+            <h3>Perro caliente</h3>
+            <p>Salchicha Porchi, queso, papa ripio y cebolla.</p>
+            <h4>$8.000</h4>
+            <button class="btn-agregar" data-nombre="Perro caliente" data-precio="8000">AGREGAR</button>
+        </div>
+        <div class="producto">
+            <img src="../index/imagenes/salchipapa.png" alt="Salchipapa">
+            <h3>Salchipapa</h3>
+            <p>Papas, salchicha, queso gratinado y maicitos.</p>
+            <h4>$15.000</h4>
+            <button class="btn-agregar" data-nombre="Salchipapa" data-precio="15000">AGREGAR</button>
+        </div>
+    </div>
+</section>
+
+<section id="promociones">
+    <div class="promociones-titulo">
+        <p class="subtitulo">NO TE QUEDES CON EL ANTOJO</p>
+        <h2>COMBOS QUE TE <span>ENCANTARÁN</span></h2>
+        <p>Tus productos favoritos acompañados de unas deliciosas papas.</p>
+    </div>
+
+    <div class="promociones-productos">
+        <div class="promo">
+            <h3>COMBO CLÁSICO</h3>
+            <p>Hamburguesa clásica + papas</p>
+            <h4>$13.500</h4>
+            <button class="btn-agregar" data-nombre="Combo clásico" data-precio="13500">AGREGAR</button>
+        </div>
+        <div class="promo">
+            <h3>COMBO HOTDOGER</h3>
+            <p>Perro caliente + papas</p>
+            <h4>$13.000</h4>
+            <button class="btn-agregar" data-nombre="Combo Hotdoger" data-precio="13000">AGREGAR</button>
+        </div>
+        <div class="promo">
+            <h3>COMBO PATACÓN</h3>
+            <p>Hamburguesa de patacón + papas</p>
+            <h4>$14.500</h4>
+            <button class="btn-agregar" data-nombre="Combo patacón" data-precio="14500">AGREGAR</button>
+        </div>
+    </div>
+</section>
+
+<section id="pedido">
+    <div class="titulo-bloque">
+        <p class="subtitulo">CASI LISTO</p>
+        <h2>MI <span>PEDIDO</span></h2>
+    </div>
+
+    <div class="carrito">
+        <p id="vacio" class="vacio">Aún no has agregado nada. ¡Elige algo del menú!</p>
+        <ul id="lista-pedido"></ul>
+        <p class="total">Total: <span id="total">$0</span></p>
+        <div class="acciones-pedido">
+            <button id="vaciar" class="btn-secundario">VACIAR PEDIDO</button>
+            <a id="enviar" href="https://wa.me/" target="_blank" class="btn-principal">PEDIR POR WHATSAPP</a>
         </div>
     </div>
 </section>
@@ -116,51 +162,32 @@
     <div class="caja-tabla">
         <table>
             <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Pedido</th>
-                    <th>Total</th>
-                    <th>Estado</th>
-                </tr>
+                <tr><th>Fecha</th><th>Pedido</th><th>Total</th><th>Estado</th></tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>12 nov 2026</td>
-                    <td>Combo clásico</td>
-                    <td>$13.500</td>
-                    <td><span class="estado">Entregado</span></td>
-                </tr>
-                <tr>
-                    <td>05 nov 2026</td>
-                    <td>Salchipapa</td>
-                    <td>$15.000</td>
-                    <td><span class="estado">Entregado</span></td>
-                </tr>
-                <tr>
-                    <td>29 oct 2026</td>
-                    <td>Combo Hotdoger</td>
-                    <td>$13.000</td>
-                    <td><span class="estado">Entregado</span></td>
-                </tr>
+                <tr><td>12 nov 2026</td><td>Combo clásico</td><td>$13.500</td><td><span class="estado">Entregado</span></td></tr>
+                <tr><td>05 nov 2026</td><td>Salchipapa</td><td>$15.000</td><td><span class="estado">Entregado</span></td></tr>
+                <tr><td>29 oct 2026</td><td>Combo Hotdoger</td><td>$13.000</td><td><span class="estado">Entregado</span></td></tr>
             </tbody>
         </table>
     </div>
 
-    <a href="https://wa.me/" class="btn-principal">PEDIR DE NUEVO</a>
+    <a href="#menu" class="btn-principal">PEDIR DE NUEVO</a>
 </section>
 
 <footer>
     <div class="footer-contenido">
-        <h2>HOTDOGER<span>.</span></h2>
+        <img src="../index/imagenes/logo.png" alt="Hotdoger" class="footer-logo">
         <p>Que no te lo cuenten, ven y disfruta.</p>
         <div class="footer-redes">
             <a href="https://www.instagram.com/hotdoger_iba/" target="_blank">Instagram</a>
             <a href="../index/index.html#contacto">Contacto</a>
-            <a href="#acceso">Volver arriba</a>
+            <a href="#mi-cuenta">Volver arriba</a>
         </div>
         <p class="copyright">© 2026 Hotdoger. Todos los derechos reservados.</p>
     </div>
 </footer>
 
+<script src="js/pedido.js"></script>
 </body>
 </html>

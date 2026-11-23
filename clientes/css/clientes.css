@@ -279,3 +279,144 @@ tbody tr:nth-child(even) {
         font-size: 30px;
     }
 }
+.btn-agregar,
+.btn-secundario {
+    background-color: #ff8c00;
+    color: #111;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+.producto .btn-agregar,
+.promo .btn-agregar {
+    margin-top: 18px;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #ff8c00;
+    border: 2px solid #ff8c00;
+}
+
+.btn-secundario:hover {
+    background-color: #ff8c00;
+    color: #111;
+}
+
+#pedido {
+    background-color: #111;
+    text-align: center;
+}
+
+#menu {
+    scroll-margin-top: 80px;
+}
+
+.carrito {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+}
+
+.vacio {
+    color: #bbb;
+    text-align: center;
+}
+
+#lista-pedido {
+    list-style: none;
+}
+
+#lista-pedido li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #333;
+}
+
+.nombre-item {
+    flex: 1;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-cantidad {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cantidad:hover {
+    background-color: #ff8c00;
+    color: #111;
+}
+
+.subtotal {
+    min-width: 80px;
+    text-align: right;
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.total {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px 0;
+}
+
+.total span {
+    color: #ff8c00;
+}
+
+.acciones-pedido {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.acciones-pedido .btn-principal,
+.acciones-pedido .btn-secundario {
+    padding: 14px 22px;
+}
+
+@media (max-width: 600px) {
+    .carrito {
+        padding: 20px 15px;
+    }
+
+    #lista-pedido li {
+        flex-wrap: wrap;
+    }
+
+    .acciones-pedido {
+        justify-content: center;
+    }
+}
